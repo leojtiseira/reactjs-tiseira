@@ -1,14 +1,18 @@
 //import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BarraNavegacion from './components/BarraNavegacion';
+import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <BarraNavegacion/>
+      <ItemListContainer greeting="Bienvenidos" />
     </div>
   );
 }
 
 export default App;
+
