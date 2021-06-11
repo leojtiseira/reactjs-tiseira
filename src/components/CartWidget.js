@@ -5,8 +5,7 @@ import Image from 'react-bootstrap/Image'
 export default class CarWidget extends Component {
     render() {
         return (
-            <Image alt="" src={carrito} width="30" height="30" rounded      
-      />
+            <Image alt="" src={carrito} width="25" height="25" />
         )
     }
 }
