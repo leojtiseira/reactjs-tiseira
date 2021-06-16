@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import carrito from '../assets/img/carrito.png';
+import carrito from '../images/carrito.png';
 import Image from 'react-bootstrap/Image'
 
 export default class CarWidget extends Component {
