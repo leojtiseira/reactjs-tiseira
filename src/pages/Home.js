@@ -21,7 +21,7 @@ export default class Home extends Component {
               <h1>Bienvenidos</h1>
 
               
-              <Link className="btn btn-primary" to="/badges">
+              <Link className="btn btn-primary" to="/productos">
                 Productos
               </Link>
             </div>

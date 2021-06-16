@@ -1,12 +1,12 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import CartWidget from './CartWidget'
-//import Productos from '../pages/Productos';
+
 
 export default function BarraNavegacion() {
     return (
                 <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
-                  <Navbar.Brand href="#home">CocinaCero</Navbar.Brand>     
+                  <Nav.Link href="/Home">CocinaCero</Nav.Link>     
                   <CartWidget/>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -18,8 +18,8 @@ export default function BarraNavegacion() {
                           <NavDropdown.Item href="#action/3.2">Carne</NavDropdown.Item>
                           <NavDropdown.Item href="#action/3.3">Pollo</NavDropdown.Item>                        
                          </NavDropdown>
-                         <Nav.Link href="#Nosotros">Nosotros</Nav.Link>
-                         <Nav.Link href="#Contacto">Contacto</Nav.Link>
+                         <Nav.Link href="/Nosotros">Nosotros</Nav.Link>
+                         <Nav.Link href="/Contacto">Contacto</Nav.Link>
                       </Nav>
                     </Navbar.Collapse>
                   </Navbar>                        
