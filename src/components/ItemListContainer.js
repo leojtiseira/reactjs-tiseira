@@ -7,17 +7,17 @@ class ItemListContainer extends React.Component {
       <div className="BadgesListItem">
         <img
           className="BadgesListItem__avatar"
-          src={this.props.badge.avatarUrl}
-          alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+          src={this.props.item.name}
+          alt={`${this.props.item.name} `}
         />
 
         <div>
           <strong>
-            {this.props.badge.firstName} {this.props.badge.lastName}
+            {this.props.item.name} 
           </strong>
-          <br />@{this.props.badge.twitter}
+          <br />@
           <br />
-          {this.props.badge.jobTitle}
+          {this.props.item.jobTitle}
         </div>
       </div>
     );

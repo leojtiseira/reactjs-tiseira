@@ -7,11 +7,11 @@ class ItemList extends React.Component {
     return (
       <div className="BadgesList">
         <ul className="list-unstyled">
-          {this.props.badges.map(badge => {
+          {this.props.item.map(item => {
             return (
 //importante el id en el key
-                  <li key={badge.id}>
-                <ItemListContainer Container badge={badge} />
+                  <li key={item.id}>
+                <ItemListContainer Container item={item} />
               </li>
             );
           })}
