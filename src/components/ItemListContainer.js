@@ -1,27 +1,11 @@
-import React from 'react';
-import './styles/ItemList.css';
+import React from 'react'
+import ItemList from './ItemList'
 
-class ItemListContainer extends React.Component {
-  render() {
+export const ItemListContainer = () => {
     return (
-      <div className="BadgesListItem">
-        <img
-          className="BadgesListItem__avatar"
-          src={this.props.item.name}
-          alt={`${this.props.item.name} `}
-        />
-
-        <div>
-          <strong>
-            {this.props.item.name} 
-          </strong>
-          <br />@
-          <br />
-          {this.props.item.jobTitle}
-        </div>
-      </div>
-    );
-  }
+               
+                    <ItemList/>
+               )
 }
 
 export default ItemListContainer

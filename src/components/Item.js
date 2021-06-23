@@ -1,36 +1,28 @@
-import React from 'react';
-import './styles/Item.css';
+import React from "react";
+import { Card } from 'react-bootstrap';
+import Counter from './Counter';
+import { Link } from 'react-router-dom'
 
-
-class Item extends React.Component {
-  render() {
-    return (
-      <div className="Badge">
-        <div className="Badge__header">
-          <img src={confLogo} alt="Logo de la conferencia" />
-        </div>
-
-        <div className="Badge__section-name">
-          <img
-            className="Badge__avatar"
-            src={this.props.avatarUrl}
-            alt="Avatar"
-          />
-          <h1>
-            {this.props.firstName} <br /> {this.props.lastName}
-          </h1>
-        </div>
-
-        <div className="Badge__section-info">
-          <h3>{this.props.jobTitle}</h3>
-          <div>@{this.props.twitter}</div>
-        </div>
-
-        <div className="Badge__footer">#cocinacero</div>
-      </div>
-    );
+const Item = ({ id, image, name, precio, stock }) => {
+  const onAdd = () => {
+    console.log(`Compraste  de artículos`)
   }
-}
+
+  return (
+    <Card style={{ width: "25rem" }}>
+      <Card.Img variant="top" src={image} />
+      <Card.Body>
+        <Link to={`/${id}`}><Card.Title>{name}</Card.Title></Link>
+        <Card.Text>
+          ${precio} Stock:{stock}
+        </Card.Text>
+        <div>
+        <Counter stock={stock} onAdd={onAdd} />
+        </div>      
+      </Card.Body>
+    </Card>
+  );
+};
 
 export default Item;
 

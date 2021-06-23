@@ -5,7 +5,7 @@ import CartWidget from './CartWidget'
 
 export default function BarraNavegacion() {
     return (
-                <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+                <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" >
                   <Nav.Link href="/Home">CocinaCero</Nav.Link>     
                   <CartWidget/>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />

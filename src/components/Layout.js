@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Navbar from './BarraNavegacion';
 
 function Layout(props) {
@@ -12,5 +11,4 @@ function Layout(props) {
     </React.Fragment>
   );
 }
-
 export default Layout;
