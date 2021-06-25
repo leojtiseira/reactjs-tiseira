@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import {Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+
 
 export const Counter = ({ stock, onAdd }) => {
     const [counter, setCounter] = useState(1)
-    const sumar = () => {
+      
+const sumar = () => {
         if (counter < stock) {
             setCounter(counter + 1)
         }
@@ -31,7 +34,9 @@ export const Counter = ({ stock, onAdd }) => {
                     <button onClick={restar} >-</button>
                     <input type="number" value={counter} onChange={manualChange} />
                     <button onClick={(sumar)}>+</button>
-                    <Button onClick={onAdd} variant="success">Comprar</Button>
+                    <Button onClick={onAdd} variant="success">Agregar al carro</Button>
+                    <Link to="/CheckOut">FInalizar compra</Link>
+                    
                 </>
                 :
                 <p>No hay más disponibilidad</p>
