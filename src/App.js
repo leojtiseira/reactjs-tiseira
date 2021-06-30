@@ -7,16 +7,22 @@ import Productos from './pages/Productos';
 import Footer from '../src/components/Footer';
 import NotFound from './pages/NotFound';
 import ItemDetailContainer from './components/ItemDetailContainer'
+import AppContext from './context/AppContext'
+import useInitialState from './hooks/useInitialState'
 
-function App() {
+
+function App  ()  {
+const initialState = useInitialState();
+
   return (
+    <AppContext.Provider value={initialState}>
     <BrowserRouter>
       <Layout />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/productos" component={Productos} />
-        <Route exact path="/nosotros" />
+          <Route exact path="/nosotros" />
         <Route exact path="/contacto" />
         <Route path="/:product_id">
           <ItemDetailContainer />
@@ -25,6 +31,7 @@ function App() {
       </Switch>
       <Footer />
     </BrowserRouter>
+    </AppContext.Provider>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './Counter'
+import ItemCounter from './ItemCounter'
 
 export const ItemDetail = ({item}) => {
     console.log(item)
@@ -11,7 +11,7 @@ export const ItemDetail = ({item}) => {
             <img src={item.thumbnail} alt="" />
             <h2>Precio: ${item.price}</h2>
             <h3>Description</h3>
-            <Counter stock={item.available_quantity}/>
+            <ItemCounter stock={item.available_quantity}/> 
             </div>
             :
             <p>No hay nada para mostrar</p>

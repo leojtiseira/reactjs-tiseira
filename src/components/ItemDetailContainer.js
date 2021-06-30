@@ -8,12 +8,10 @@ export const ItemDetailContainer = () => {
     
     useEffect(() => {
         fetch(`https://api.mercadolibre.com/items/${product_id}?include_attributes=all`)
-        .then(res=> res.json())
-        .then(res =>{
-            setProduct(res)
-            console.log(res)
-        })
-    }, [useParams])
+        .then(response=> response.json())
+        .then(data =>{
+            setProduct(data)  })
+    } )
 
     return (
         <>

@@ -1,13 +1,16 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import CartWidget from './CartWidget'
+import CartWidget from './cartwidget'
+
 
 
 export default function BarraNavegacion() {
+  
   return (
+    
     <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" >
       <Nav.Link href="/Home">CocinaCero</Nav.Link>
-      <CartWidget />
+      <CartWidget/>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">

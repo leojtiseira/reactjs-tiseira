@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Item from './Item'
+import AppContext from '../context/AppContext'
 
 export const ItemList = () => {
-  const [products, setProducts] = useState([])
-
+  const [product, setProducts] = useState([])
+  const [cart,setCart] = useState ([])
+  
   useEffect(() => {
     fetch("https://api.mercadolibre.com/sites/MLA/search?category=MLA1403")
-      .then(res => res.json())
-      .then(res => {
-        setProducts(res.results)
-        console.log(res)
-      })
-  }, 
-  [])
+      .then(response => response.json())
+      .then(data => setProducts(data.results))
+  }, [])
+
+  const {addToCart } = useContext(AppContext);
+  const handleAddToCart = product => () => {
+    addToCart(product)
+  }
 
   return (
-    <>
+    <>  
       {
-        products.map((element, index) => {
+        product.map((element, id) => {
           return (
-            <Item key={index} 
-            id={element.id} 
-            image={element.thumbnail}
-             name={element.title} 
-             precio={element.price} 
-             stock={element.available_quantity} />
+            <Item
+              key={id}
+              id={element.id}
+              image={element.thumbnail}
+              name={element.title}
+              precio={element.price}
+              stock={element.available_quantity}
+              handleAddToCart={handleAddToCart}
+            />
           )
         })
       }

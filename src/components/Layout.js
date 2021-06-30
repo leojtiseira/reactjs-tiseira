@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './BarraNavegacion';
+import BarraNavegacion from './BarraNavegacion';
 
 function Layout(props) {
   // const children = props.children;
 
   return (
     <React.Fragment>
-      <Navbar />
+      <BarraNavegacion/>
       {props.children}
     </React.Fragment>
   );
